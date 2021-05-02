@@ -63,7 +63,7 @@ let resultado = setInterval(() => {
         backImage.alt = 'back5';
     }
 
-    if(pontuacaoTotal === 100) {
+    if(pontuacaoTotal === 1000) {
         finishGame();
         Swal.fire({
             title: "Parábens",
