@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    background-color: #fae6e7;
+}
+
+#container {
+    height: 400px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+    background-color: #a4b3f8;
+    border: solid 10px #2b4a97;
+}
+
+#container #burronic {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+}
+
+#container #burronic img {
+    height: 70px;
+    width: 70px;
+    transform: scaleX(-1);
+}
+
+#container #TNT {
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    z-index: 1;
+}
+
+#container #TNT img {
+    height: 80px;
+    width: 125px;
+}
+
+#container #chao {
+    height: 30px;
+    width: 2000px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container #chao img {
+    height: 30px;
+    width: 2000px;
+    left: 0;
+}
+
+#container #back {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    z-index: 0;
+    visibility: hidden;
+}
+
+#container #back img {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+}
+
+#container #pontuacao {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    margin: 5px;
+    font-size: 50px;
+    color: #2b4a97;
+}
+
+#container #fim {
+    display: none;
+    position: absolute;
+    font-size: 60px;
+    left: calc(50% - 180px);
+    top: calc(50% - 40px);
+    width: 380px;
+    height: 80px;
+    color: #2b4a97;
+}
+
+.activeBurronic {
+    animation: animateBurronic 0.8s linear infinite;
+}
+
+.activeTNT {
+    animation:  animateTNT 1.2s linear infinite;
+}
+
+.activeChao {
+    animation: animateChao 2s linear infinite;
+}
+
+.activeBack {
+    animation: animateBack 4s linear infinite;
+}
+
+.logo {
+    margin-bottom: 2vh;
+}
+
+.imageLogo2 {
+    max-width: 200px;
+    margin: 20px;
+}
+
+@keyframes animateBurronic {
+    0%, 100% {
+        bottom: 20px;
+    }
+    45%, 55% {
+        bottom: 180px;
+    }
+}
+
+@keyframes animateTNT {
+    0% {
+        right: -125px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes animateChao {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -800px;
+    }
+}
+
+@keyframes animateBack {
+    0% {
+        left: -2000px;
+    }
+    100% {
+        left: 100%;
+    }
+}
